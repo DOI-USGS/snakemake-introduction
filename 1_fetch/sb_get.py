@@ -34,14 +34,14 @@ def sb_get(item_id, sb_data_file=None, destination_dir='.'):
 
     return response
 
-def main(sb_item, sb_file, out_dir):
+def main(sb_item, sb_file):
+    out_dir = os.path.dirname(sb_file)
+    sb_data_file = os.path.basename(sb_file)
     if not os.path.exists(out_dir):
         os.makedirs(out_dir)
-    sb_get(sb_item, sb_file, out_dir)
+    sb_get(sb_item, sb_data_file, out_dir)
 
 if __name__ == "__main__":
     sb_item = "5e5d0bb9e4b01d50924f2b36"
-    sb_file = "pgdl_predictions_04_N45.50-48.00_W92.00-93.00.zip"
-    out_dir = "1_fetch/out/"
-    file_path = os.path.join(out_dir, sb_file)
+    sb_file = "1_fetch/out/pgdl_predictions_04_N45.50-48.00_W92.00-93.00.zip"
     main(sb_item, sb_file, out_dir)
