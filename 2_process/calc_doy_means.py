@@ -8,8 +8,7 @@ def read_pred_csv(csv_path):
     return df
 
 def calc_doy_means(df, site_id, out_file=None):
-    doy_means = df.groupby([df.date.dt.month, df.date.dt.day]).mean()
-    doy_means = doy_means.reset_index(drop=True)
+    doy_means = df.groupby(df.date.dt.day_of_year).mean()
     doy_means.index.name = "doy"
     doy_means["site_id"] = site_id
     if out_file:
