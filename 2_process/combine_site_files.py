@@ -8,14 +8,15 @@ def combine_site_files(site_files, out_file=None):
         combined_df.to_csv(out_file)
     return combined_df
 
-def main(out_dir, lake_ids):
+def main(out_file, site_files):
+    out_dir = os.path.dirname(out_file)
     if not os.path.exists(out_dir):
         os.makedirs(out_dir)
-    site_files = [os.path.join(out_dir, f"doy_{i}.csv") for i in lake_ids]
-    out_file = os.path.join(out_dir, "combined_doy.csv")
     combine_site_files(site_files, out_file)
 
 if __name__ == '__main__':
-    out_dir = "2_process/out"
+    out_dir = os.path.join("2_process", "out")
+    out_file = os.path.join(out_dir, "combined_doy.csv")
     lake_ids = ["120020150", "107072210"]
-    main(out_dir, lake_ids)
+    site_files = [os.path.join(out_dir, f"doy_{i}.csv") for i in lake_ids]
+    main(out_file, site_files)
