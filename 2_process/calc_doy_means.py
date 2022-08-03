@@ -20,7 +20,7 @@ def main(out_file, in_file, lake_id):
     if not os.path.exists(out_dir):
 	       os.makedirs(out_dir)
     df = read_pred_csv(in_file)
-    calc_doy_means(df, lake_id, f"2_process/out/doy_{lake_id}.csv")
+    calc_doy_means(df, lake_id, out_file)
 
 if __name__ == '__main__':
     lake_ids = ["120020150", "107072210"]
