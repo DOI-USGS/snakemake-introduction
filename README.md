@@ -1,4 +1,4 @@
-# snakemake-tutorial-scratch
+# Introduction to Snakemake Tutorial
 This tutorial introduces the use of Snakemake as a pipelining tool for Python code. It explains some general Snakemake concepts and gives an opportunity to implement them on a small water-related example problem.
 
 The tutorial is organized as an ordered set of lessons, each of which introduces new Snakemake concepts. Each lesson is contained in a markdown file in the `issues` folder of this repository. The rest of the code contained in the repository is the codebase you will start from and modify as you go through each lesson.
