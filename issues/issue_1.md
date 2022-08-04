@@ -1,6 +1,6 @@
 # Issue 1: Introduction to Snakefiles
 
-Pipeline steps: Download the temperature predictions.
+Pipeline steps: Download the temperature predictions
 
 Concepts learned: 
 - Snakefile structure
