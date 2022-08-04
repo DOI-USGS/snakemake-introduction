@@ -68,10 +68,10 @@ python 1_fetch/sb_get.py
 ```
 
 The script should download a single zip file to `1_fetch/tmp/pgdl_predictions_04_N45.50-48.00_W92.00-93.00.zip`.
-If the file wasn't downloaded, let your instructor know and we'll get it sorted out!
+If the file wasn't downloaded, let your instructor know and we'll get it sorted out.
 
 If the file is there, great!
-Now, let's write a Snakemake rule to download that file and build the first step of our pipeline!
+Now, let's write a Snakemake rule to download that file and build the first step of our pipeline.
 
 ## Writing a rule
 
@@ -111,7 +111,7 @@ rule get_sb_data:
         "1_fetch/sb_get.py"
 ```
 Like with any Python file, be sure to pay attention to indentation!
-Since the script is a `.py`, Snakemake knows to use `python` to run it.
+Since the script has the extension `.py`, Snakemake knows to use `python` to run it.
 Unless we specify otherwise, the version of Python that's used to run the script will be the version that's called when you type `python` into the command line.
 So, when you want to run the pipeline, be sure that you're in the correct Conda environment.
 
@@ -145,6 +145,16 @@ If after all that, there's still a problem, let your instructor know.
 
 If you've been able to download the file using Snakemake, then congratulations!
 You've written your first Snakemake rule!
+
+If you're working with an instructor, then create a PR for them to review.
+Create a new branch in your fork entitled "issue-1", commit your changes to that branch, and push them to your fork.
+```
+git checkout -b issue-1
+git add Snakefile
+git commit
+git push -u origin issue-1
+```
+Then, you can submit a PR through GitHub. Make sure that your PR requests to merge into the main branch of YOUR FORK and not the main branch of USGS-R/snakemake-introduction.
 
 In the next issue, we'll generalize our workflow so that the ScienceBase item and filename aren't hardcoded into the script, but rather specified in the Snakefile.
 
