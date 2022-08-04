@@ -1,0 +1,12 @@
+name: snakemake-tutorial
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - pip
+  - snakemake
+  - pandas
+  - seaborn
+  - matplotlib
+  - pip:
+    - sciencebasepy
