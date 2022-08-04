@@ -59,6 +59,6 @@ Save your Snakefile and Python script with these updates, and go ahead and delet
 snakemake --cores 1 1_fetch/tmp/pgdl_predictions_04_N45.50-48.00_W92.00-93.00.zip
 ```
 
-Hopefully the snakemake pipeline executed without any errors and you were able to re-download the output file for our current pipeline: `1_fetch/tmp/pgdl_predictions_04_N45.50-48.00_W92.00-93.00.zip`. If you had any trouble, look back over your work, and contact your instructor if you can't find the problem on your own.
+Hopefully the snakemake pipeline executed without any errors and you were able to re-download the output file for our current pipeline: `1_fetch/tmp/pgdl_predictions_04_N45.50-48.00_W92.00-93.00.zip`. If you had any trouble, look back over your work. If you're working with an instructor, contact them for help, and once you've been able to run the pipeline successfully, submit another PR on a branch named "issue-2".
 
 In the next issue, we'll learn some best practices for unzipping files using snakemake.
