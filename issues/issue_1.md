@@ -2,7 +2,10 @@
 
 Pipeline steps: Download the temperature predictions.
 
-Concepts learned: Snakefile structure, the `script` directive, basic `snakemake` commands 
+Concepts learned: 
+- Snakefile structure
+- The `script` directive
+- Basic `snakemake` commands 
 
 ## Tutorial Overview
 
