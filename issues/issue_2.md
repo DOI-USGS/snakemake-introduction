@@ -1,6 +1,6 @@
 # Issue 2: Reading Snakefile Parameters into Your Script
 
-Pipeline steps: No new pipeline step
+Pipeline steps: No new pipeline steps
 
 Concepts learned: Snakefile python module to read in variables from snakefile
 
