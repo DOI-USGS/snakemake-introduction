@@ -1,7 +1,11 @@
 # Issue 1: Introduction to Snakefiles
 
-Pipeline steps: Download the temperature predictions.
-Concepts learned: Snakefile structure, the `script` directive, basic `snakemake` commands 
+Pipeline steps: Download the temperature predictions
+
+Concepts learned: 
+- Snakefile structure
+- The `script` directive
+- Basic `snakemake` commands 
 
 ## Tutorial Overview
 
@@ -13,7 +17,7 @@ At the same time, each issue will introduce you to new Snakemake concepts.
 
 Most of the Python code for the pipeline is already written.
 It's organized into three phases.
-- `1_fetch` downloads the lake temperature predictions from this data release on ScienceBase: https://www.sciencebase.gov/catalog/item/5e5d0bb9e4b01d50924f2b36 and unzips the files. This download includes daily temperature predictions at 0.5m depth intervals for 24 lakes. The daily predictions span multiple years.
+- `1_fetch` downloads the lake temperature predictions from this data release on ScienceBase: https://www.sciencebase.gov/catalog/item/5e5d0bb9e4b01d50924f2b36 and unzips the files. This download includes daily temperature predictions at 0.5 meter depth intervals for 24 lakes. The daily predictions span multiple years.
 - `2_process` computes the mean predicted temperature on each day of the year (at all depths) for each lake we select and then concatenates the data for each lake into a single .csv file.
 - `3_plot` plots the mean temperatures on each day of the year for each lake at a selection of depths.
 

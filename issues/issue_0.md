@@ -1,7 +1,7 @@
 # Issue 0: Installing Snakemake
 In order to walk through this learning module, we will create a new Python environment and install Snakemake and other required packages.
 
-Please make sure you have Anaconda installed on your computer before proceeding with the following steps.
+Please make sure you have Conda installed on your computer before proceeding with the following steps.
 
 If you are working in Windows, you will need to open your Anaconda prompt to follow the steps below. If you are working in Linux or macOS, you can just open your command line.
 
