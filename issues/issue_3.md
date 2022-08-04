@@ -150,5 +150,6 @@ Did Snakemake automatically execute the download step first, as we expect it to,
 
 As a one-to-many operation, unzipping is a tricky operation to include in a pipeline.
 If you've successfully unzipped the archive using Snakemake, congratulations!
+If you have instructor support, then submit a new PR for their review on a branch named "issue-3".
 
 In the next issue we'll add a rule to calculate mean temperatures by day of year for any lake using Snakemake wildcards.
