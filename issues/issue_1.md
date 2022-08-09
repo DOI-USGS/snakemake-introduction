@@ -146,7 +146,7 @@ If after all that, there's still a problem, let your instructor know.
 If you've been able to download the file using Snakemake, then congratulations!
 You've written your first Snakemake rule!
 
-If you're working with an instructor, then create a PR for them to review.
+If you're working with an instructor, then create a pull request (PR) for them to review.
 Create a new branch in your fork entitled "issue-1", commit your changes to that branch, and push them to your fork.
 ```
 git checkout -b issue-1
@@ -154,7 +154,7 @@ git add Snakefile
 git commit
 git push -u origin issue-1
 ```
-Then, you can submit a PR through GitHub. Make sure that your PR requests to merge into the main branch of YOUR FORK and not the main branch of USGS-R/snakemake-introduction.
+Then, you can submit a PR through GitHub. Make sure that your PR aims to merge into the main branch of YOUR FORK and not the main branch of USGS-R/snakemake-introduction. Request a review from your instructor through GitHub.
 
 In the next issue, we'll generalize our workflow so that the ScienceBase item and filename aren't hardcoded into the script, but rather specified in the Snakefile.
 
