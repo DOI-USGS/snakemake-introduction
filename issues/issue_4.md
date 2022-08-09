@@ -84,7 +84,7 @@ rule whatever_we_want_to_do_next:
 
 This would allow Snakemake to intuit that the `lake_id` wildcard should have values `120020150` and `107072210`.
 
-We aren't ready to build the next step of our pipeline yet, but we can still create another rule to resolve our wildcards. We could create a new rule with any name just like above, and run our pipeline by calling that named rule (in the example above, that would be `snakemake --cores 1 whatever_we_want_to_do_next`).
+We aren't ready to build the next step of our pipeline yet, but we can still create another rule to resolve our wildcards. We could create a new rule with any name just like above and run our pipeline by calling that named rule (in the example above, that would be `snakemake --cores 1 whatever_we_want_to_do_next`).
 
 However, it is generally considered a good Snakemake practice to collect your final outputs in a `rule all`. The naming of this rule does not make any difference, but this is a standard convention that is recommended by the source documentation.
 
@@ -109,7 +109,7 @@ snakemake --dry-run
 ## Update `calc_doy_means.py` script to use the new rule properties
 Now that we know our wildcards can be correctly resolved from our Snakefile, we just have one more update to make.
 
-Our `calc_doy_means.py` is currently set up to loop through our list of input files within the script. However, we have replaced our list of input files with wildcards. We want to update our `calc_doy_means.py` to expect a single input file. The input and output properties of our rule will be read into our python script with any wildcards already resolved, so we don't need to worry about formatting them with the `lake_id` in the script. We can also make use of the wildcards property of our rule to determine the `lake_id` instead of pullilng it out of a filename. Here's the code we want to update our `calc_doy_means.py` script with:
+Our `calc_doy_means.py` is currently set up to loop through our list of input files within the script. However, we have replaced our list of input files with wildcards. We want to update our `calc_doy_means.py` to expect a single input file. The input and output properties of our rule will be read into our python script with any wildcards already resolved, so we don't need to worry about formatting them with the `lake_id` in the script. We can also make use of the wildcards property of our rule to determine the `lake_id` instead of pulling it out of a filename. Here's the code we want to update our `calc_doy_means.py` script with:
 ```
 if __name__ == '__main__':
     out_file = snakemake.output['out_file']
@@ -118,11 +118,13 @@ if __name__ == '__main__':
     main(out_file, in_file, lake_id)
 ```
 
-We're all done - time to run our pipeline! Now that we have used wildcards in our Snakefile, that rule can actually be paralellized. Let's tell snakemake to use two cores so that each lake's data can be processed in parallel. Try it out:
+We're all done - time to run our pipeline! Now that we have used wildcards in our Snakefile, that rule can actually be parallelized. Let's tell snakemake to use two cores so that each lake's data can be processed in parallel. Try it out:
 ```
 snakemake --cores 2
 ```
 
-We've successfully learned how to implement wildcards in our pipeline, and introducted the concepts of the `rule all` and how to test your pipeline with a `dry-run`.
+If you're working with an instructor, submit a new PR on a branch named "issue-4".
+
+We've successfully learned how to implement wildcards in our pipeline and introduced the concepts of the `rule all` and how to test your pipeline with a `dry-run`.
 
 In the next issue, we'll learn how to update your Snakefile with new wildcards, as well as how to combine these wildcards back together to produce a single file and plot for all of the lakes.

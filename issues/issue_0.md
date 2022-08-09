@@ -37,11 +37,11 @@ You can manually create your Conda environment and install the required packages
 6. Install any additional packages needed for this tutorial (listed in the environment.yaml file) using Conda or Mamba.
 
 
-
-
 **Last Resort**: If neither of the above options work, you can try installing Snakemake or snakemake-minimal with the appropriate Conda command:
 
 `
 conda install -c conda-forge bioconda::snakemake
 conda install -c conda-forge bioconda::snakemake-minimal
 `
+
+If you're having trouble with the installation and you're working through this tutorial with instructor support, ask your instructor for assistance.

@@ -109,6 +109,7 @@ snakemake --cores 1
 Did the pipeline run as expected?
 If not, track down any problems, or ask your instructor for assistance.
 If so, congratulations! The pipeline is complete.
+If you have an instructor, submit one last PR to them on a branch named "issue-5".
 
 ## Changing and rebuilding pipeline targets
 
