@@ -42,6 +42,6 @@ def main(sb_item, sb_file):
     sb_get(sb_item, sb_data_file, out_dir)
 
 if __name__ == "__main__":
-    sb_item = "5e5d0bb9e4b01d50924f2b36"
-    sb_file = "1_fetch/tmp/pgdl_predictions_04_N45.50-48.00_W92.00-93.00.zip"
+    sb_item = snakemake.params['sb_item']
+    sb_file = snakemake.output['sb_file']
     main(sb_item, sb_file)

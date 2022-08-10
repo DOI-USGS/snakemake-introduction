@@ -5,6 +5,9 @@
 
 #outputs
 1_fetch/out/tmp/*
+1_fetch/tmp/*
 1_fetch/out/*
 2_process/out/*
 3_plot/out/*
+
+.snakemake/*
