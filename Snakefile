@@ -1,3 +1,8 @@
+rule all:
+    input:
+        "2_process/out/doy_120020150.csv",
+        "2_process/out/doy_107072210.csv"
+
 rule get_sb_data:
     params:
         sb_item = '5e5d0bb9e4b01d50924f2b36'
@@ -38,6 +43,14 @@ rule unzip_sb_data:
         out_dir = '1_fetch/out/'
     script: 
         '1_fetch/unzip_file.py'
+
+rule calc_doy_means:
+    input:
+        "1_fetch/out/tmp/pgdl_nhdhr_{lake_id}_temperatures.csv"
+    output:
+        "2_process/out/doy_{lake_id}.csv"
+    script:
+        "2_process/calc_doy_means.py"
     
 
 
