@@ -25,5 +25,5 @@ def main(out_file, in_file, lake_id):
 if __name__ == '__main__':
     out_file = str(snakemake.output)
     in_file = str(snakemake.input)
-    lake_id = str(snakemake.wildcards)
+    lake_id = snakemake.wildcards['lake_id']
     main(out_file, in_file, lake_id)
