@@ -61,4 +61,4 @@ snakemake --cores 1 1_fetch/tmp/pgdl_predictions_04_N45.50-48.00_W92.00-93.00.zi
 
 Hopefully the snakemake pipeline executed without any errors and you were able to re-download the output file for our current pipeline: `1_fetch/tmp/pgdl_predictions_04_N45.50-48.00_W92.00-93.00.zip`. If you had any trouble, look back over your work. If you're working with an instructor, contact them for help, and submit another PR on a branch named "issue-2" once you've been able to run the pipeline successfully.
 
-In the next issue, we'll learn some best practices for unzipping files using snakemake.
+In the next issue, we'll learn some best practices for unzipping files using snakemake. Go to [Issue 3](issue_3.md) once you're ready.
