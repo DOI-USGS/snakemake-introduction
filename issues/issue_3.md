@@ -87,8 +87,15 @@ Specifying multiple outputs is as simple as listing many strings separated by co
 You can specify multiple inputs or parameters in exactly the same way.
 Add the code above to the Snakefile.
 
-> NOTE: The path to each output file is included.
+Snakemake stores everything specified in the `input`, `output`, and `params` directives as Python list-like objects.
+That means that you can treat the object `snakemake.output` as a regular Python list, for example.
+So, in a Python script that is called by the Snakefile, you could use `snakemake.output[-1]` to access the last file listed under the output directive in the Snakefile. You could also pass `snakemake.input` as an argument to a function that expects a list-like object without a problem. Something to keep in mind for the future!
+
+> NOTE: We've included the relative path to each output file.
 > Snakemake requires all paths to files to be specified relative to the Snakefile.
+> These paths may look a little strange, with a `tmp` folder inside an `out` folder.
+> The reason for this strange organization is that `pgdl_predictions_04_N45.50-48.00_W92.00-93.00.zip` automatically unzips into a folder named `tmp`.
+> It's a coincidence that we downloaded the zip file to a folder named `1_fetch/tmp`. 
 
 
 ## Completing the rule
