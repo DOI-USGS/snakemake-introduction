@@ -127,4 +127,4 @@ If you're working with an instructor, submit a new PR on a branch named "issue-4
 
 We've successfully learned how to implement wildcards in our pipeline and introduced the concepts of the `rule all` and how to test your pipeline with a `dry-run`.
 
-In the next issue, we'll learn how to update your Snakefile with new wildcards, as well as how to combine these wildcards back together to produce a single file and plot for all of the lakes.
+In the final issue, we'll learn how to update your Snakefile with new wildcards, as well as how to combine these wildcards back together to produce a single file and plot for all of the lakes. Head to [Issue 5](issue_5.md) once you're ready.
