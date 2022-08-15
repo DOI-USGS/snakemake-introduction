@@ -156,6 +156,4 @@ git push -u origin issue-1
 ```
 Then, you can submit a PR through GitHub. Make sure that your PR aims to merge into the main branch of YOUR FORK and not the main branch of USGS-R/snakemake-introduction. Request a review from your instructor through GitHub.
 
-In the next issue, we'll generalize our workflow so that the ScienceBase item and filename aren't hardcoded into the script, but rather specified in the Snakefile.
-
-
+In the next issue, we'll generalize our workflow so that the ScienceBase item and filename aren't hardcoded into the script, but rather specified in the Snakefile. Go to [Issue 2](issue_2.md) once you're ready.
