@@ -5,7 +5,7 @@ The tutorial is organized as an ordered set of lessons, each of which introduces
 
 In order to walk through this tutorial, fork this repository into your own GitHub account. Then, clone your fork onto your local computer to work on.
 
-To begin the tutorial, open the markdown file `issues/issue_0.md` in GitHub. Issue 0 takes you through some basic setup and installation. You can then proceed through the following issues to continue through the tutorial.
+To begin the tutorial, open the markdown file [`issues/issue_0.md`](issues/issue_0.md) in GitHub. Issue 0 takes you through some basic setup and installation. You can then proceed through the following issues to continue through the tutorial.
 
 For every issue (except issue 0), you will be making changes to the code in the repository. If you are working with an instructor for this tutorial, you should push your changes to a new branch on your fork after finishing each issue. You can then open a pull request to merge your code changes into the main branch of your fork, and request review by your instructor. After they approve the pull request, make sure to pull the changes to your local copy of the repository, and continue on with the next issue.
 
