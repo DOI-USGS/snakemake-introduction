@@ -45,3 +45,5 @@ conda install -c conda-forge bioconda::snakemake-minimal
 `
 
 If you're having trouble with the installation and you're working through this tutorial with instructor support, ask your instructor for assistance.
+
+Once you're all set, head over to [Issue 1](issue_1.md) to start learning how to use Snakemake.
