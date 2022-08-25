@@ -18,7 +18,7 @@ def calc_doy_means(df, site_id, out_file=None):
 def main(out_file, in_file, lake_id):
     out_dir = os.path.dirname(out_file)
     if not os.path.exists(out_dir):
-	       os.makedirs(out_dir)
+        os.makedirs(out_dir)
     df = read_pred_csv(in_file)
     calc_doy_means(df, lake_id, out_file)
 

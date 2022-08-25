@@ -7,7 +7,7 @@ def unzip_file(zip_file_path, out_dir):
 
 def main(zip_file_path, out_dir):
     if not os.path.exists(out_dir):
-	    os.makedirs(out_dir)
+        os.makedirs(out_dir)
     unzip_file(zip_file_path, out_dir)
 
 if __name__ == '__main__':

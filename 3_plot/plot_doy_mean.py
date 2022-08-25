@@ -16,7 +16,7 @@ def plot_doy_means(out_file, df_sel_depths):
 def main(combined_doy_means, out_file, depths):
     out_dir = os.path.dirname(out_file)
     if not os.path.exists(out_dir):
-	    os.makedirs(out_dir)
+        os.makedirs(out_dir)
     df_combined = pd.read_csv(combined_doy_means).set_index(["doy", "site_id"])
     depth_cols = [f"temp_{d}" for d in depths]
     df_sel_depths = df_combined[depth_cols]
