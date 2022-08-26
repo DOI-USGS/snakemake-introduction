@@ -93,9 +93,6 @@ So, in a Python script that is called by the Snakefile, you could use `snakemake
 
 > NOTE: We've included the relative path to each output file.
 > Snakemake requires all paths to files to be specified relative to the Snakefile.
-> These paths may look a little strange, with a `tmp` folder inside an `out` folder.
-> The reason for this strange organization is that `pgdl_predictions_04_N45.50-48.00_W92.00-93.00.zip` automatically unzips into a folder named `tmp`.
-> It's a coincidence that we downloaded the zip file to a folder named `1_fetch/tmp`. 
 
 
 ## Completing the rule
