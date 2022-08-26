@@ -46,6 +46,7 @@ rule combine_site_files:
         "2_process/out/doy_107072210.csv"
 ```
 The wildcard in rule `calc_doy_means` will be resolved in the same way that they are when rule `all` requests these files as inputs.
+> NOTE: Remember to add commas to separate multiple files!
 
 There is only one output file for this step: a single .csv file with all the averaged temperatures for every lake.
 In `2_process/combine_site_files.py` you can see that the file is saved to `2_process/out/combined_doy.csv`.
