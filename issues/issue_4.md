@@ -72,6 +72,7 @@ rule calc_doy_means:
     script:
         "2_process/calc_doy_means.py"
 ```
+Don't forget to name the variables in the rule (`in_file` and `out_file`)! They aren't required, but it's good practice to specify names for inputs, outputs, and params. It will make the code in your script easier to read and understand. Of course, if there's a long list of input or output files it may not make sense to assign a variable name to every file in the list, but it's good to name variables whenever practical.
 
 ## Resolve wildcards and introduction of `rule all`
 We've set up our Snakefile with some wildcards, but we've lost the information about which `lake_ids` specifically we want to process. We would typically resolve our wildcards in the next pipeline rule as inputs, like this:
@@ -109,7 +110,7 @@ snakemake --dry-run
 ## Update `calc_doy_means.py` script to use the new rule properties
 Now that we know our wildcards can be correctly resolved from our Snakefile, we just have one more update to make.
 
-Our `calc_doy_means.py` is currently set up to loop through our list of input files within the script. However, we have replaced our list of input files with wildcards. We want to update our `calc_doy_means.py` to expect a single input file. The input and output properties of our rule will be read into our python script with any wildcards already resolved, so we don't need to worry about formatting them with the `lake_id` in the script. We can also make use of the wildcards property of our rule to determine the `lake_id` instead of pulling it out of a filename. Here's the code we want to update our `calc_doy_means.py` script with:
+Our `calc_doy_means.py` is currently set up to loop through our list of input files within the script. However, we have replaced our list of input files with wildcards. We want to update our `calc_doy_means.py` to expect a single input file - Snakemake will now call the script many times, once for each `lake_id`. The input and output properties of our rule will be read into our python script with any wildcards already resolved, so we don't need to worry about formatting them with the `lake_id` in the script. We can also make use of the wildcards property of our rule to determine the `lake_id` instead of pulling it out of a filename. Here's the code we want to update our `calc_doy_means.py` script with:
 ```
 if __name__ == '__main__':
     out_file = snakemake.output['out_file']
