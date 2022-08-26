@@ -87,7 +87,11 @@ Specifying multiple outputs is as simple as listing many strings separated by co
 You can specify multiple inputs or parameters in exactly the same way.
 Add the code above to the Snakefile.
 
-> NOTE: The path to each output file is included.
+Snakemake stores everything specified in the `input`, `output`, and `params` directives as Python list-like objects.
+That means that you can treat the object `snakemake.output` as a regular Python list, for example. You are able to call items in the Snakemake directive by index (not just by name, like we did before).
+So, in a Python script that is called by the Snakefile, you could use `snakemake.output[-1]` to access the last file listed under the output directive in the Snakefile. You could also pass `snakemake.input` as an argument to a function that expects a list-like object without a problem. Something to keep in mind for the future!
+
+> NOTE: We've included the relative path to each output file.
 > Snakemake requires all paths to files to be specified relative to the Snakefile.
 
 
