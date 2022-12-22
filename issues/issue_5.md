@@ -75,7 +75,7 @@ Reach out to your instructor if you're stuck.
 
 One more rule to add!
 This final rule will plot the average temperatures at multiple depths for each of the sites we specified as inputs to `combine_site_files`.
-We'll name it `ploy_doy_mean`.
+We'll name it `plot_doy_mean`.
 For this rule we'll need one input file and one output file.
 The input file is the output of the previous step: `2_process/out/combined_doy.csv`.
 The output file is the plot we'll make as a `.png` file: `3_plot/out/doy_plot.png`.
