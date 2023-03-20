@@ -1,8 +1,8 @@
 [
   {
-    "name": "lake-temp-lstm-static-data-release",
+    "name": "snakemake-introduction",
     "organization": "U.S. Geological Survey",
-    "description": "Data release pipeline for Daily water column temperature predictions for thousands of Midwest U.S. lakes between 1979-2022 and under future climate scenarios",
+    "description": "Introduction to Snakemake Tutorial",
     "version": "main",
     "status": "Development",
     "permissions": {
@@ -14,25 +14,24 @@
         }
       ]
     },
-    "homepageURL": "https://github.com/DOI-USGS/lake-temp-lstm-static-data-release/",
-    "downloadURL": "https://github.com/DOI-USGS/lake-temp-lstm-static-data-release/archive/refs/heads/main.zip",
-    "disclaimerURL": "https://github.com/DOI-USGS/lake-temp-lstm-static-data-release/raw/main/DISCLAIMER.md",
-    "repositoryURL": "https://github.com/DOI-USGS/lake-temp-lstm-static-data-release.git",
+    "homepageURL": "https://github.com/DOI-USGS/snakemake-introduction",
+    "downloadURL": "https://github.com/DOI-USGS/snakemake-introduction/archive/refs/heads/main.zip",
+    "disclaimerURL": "https://github.com/DOI-USGS/snakemake-introduction/raw/main/DISCLAIMER.md",
+    "repositoryURL": "https://github.com/DOI-USGS/snakemake-introduction.git",
     "vcs": "git",
-    "laborHours": -1,
+    "laborHours": 100,
     "tags": [
-      "R",
+      "python",
       "USGS",
-	  "scipiper",
-	  "data release",
-	  "doi|https://doi.org/10.5066/P9EQQER7"
+	  "snakemake",
+	  "tutorial"
     ],
     "languages": [
-      "R"
+      "python"
     ],
     "contact": {
-      "name": "Lindsay Platt",
-      "email": "lplatt@usgs.gov"
+      "name": "Wallace (Andy) McAliley",
+      "email": "wmcaliley@usgs.gov"
     },
     "date": {
       "metadataLastUpdated": "2023-03-20"
