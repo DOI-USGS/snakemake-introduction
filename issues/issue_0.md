@@ -7,9 +7,9 @@ If you are working in Windows, you will need to open your Anaconda prompt to fol
 
 ## Install using environment.yaml
 You can create a Conda environment for this tutorial with all the required packages in one step by running the following command:
-`
+```
 conda env create -f environment.yaml
-`
+```
 
 Note: You may have issues installing with the environment.yaml file. This could be due to the fact that Conda sometimes has trouble installing Snakemake. If you received any errors when creating the environment, skip down to the **Create environment and install packages manually** section.
 
@@ -39,10 +39,10 @@ You can manually create your Conda environment and install the required packages
 
 **Last Resort**: If neither of the above options work, you can try installing Snakemake or snakemake-minimal with the appropriate Conda command:
 
-`
+```
 conda install -c conda-forge bioconda::snakemake
 conda install -c conda-forge bioconda::snakemake-minimal
-`
+```
 
 If you're having trouble with the installation and you're working through this tutorial with instructor support, ask your instructor for assistance.
 
